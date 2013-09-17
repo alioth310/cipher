@@ -1,0 +1,11 @@
+<div class="form-group">
+
+    {% if 'button_wrapper_style' in kwargs %}
+    <div class="{{ kwargs['button_wrapper_style'] }}">
+    {% end %}
+    <button type="{{ field.type[:-5].lower() }}" class="{{ kwargs['button_style'] }}">{{ _(field.label.text) }}</button>
+    {% if 'button_wrapper_style' in kwargs %}
+    </div>
+    {% end %}
+
+</div>

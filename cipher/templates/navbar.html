@@ -1,0 +1,39 @@
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/cipher">{{ _('Stray') }}</a>
+        </div>
+
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/cipher">{{ _('Home') }}</a></li>
+                <li><a href="/about">{{ _('About') }}</a></li>
+            </ul>
+            {% if username is None %}
+            <div class="navbar-form navbar-right">
+                <a href="/user/login" class="btn btn-primary">{{ _('Login') }}</a>
+                <a href="/user/signup" class="btn btn-default">{{ _('Sign up') }}</a>
+            </div>
+            {% else %}
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ username }}<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="/user/profile/level"><span class="glyphicon glyphicon-list"></span>{{ _('Choose Level') }}</a></li>
+                    <li><a href="/user/profile/password"><span class="glyphicon glyphicon-lock"></span>{{ _('Change Password') }}</a></li>
+                    {% if group == '1' %}
+                    <li><a href="/admin/index"><span class="glyphicon glyphicon-wrench"></span>{{ _('Management Center') }}</a></li>
+                    {% end %}
+                    <li><a href="/user/logout"><span class="glyphicon glyphicon-off"></span>{{ _('Logout') }}</a></li>
+                </ul>
+                </li>
+            </ul>
+            {% end %}
+        </div>
+    </div>
+</div>

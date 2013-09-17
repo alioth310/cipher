@@ -1,0 +1,42 @@
+{% extends "admin_main.html" %}
+
+{% block title %}
+{{ _('Level Management') }} - {{ _('Management Center') }} - {{ _('Stray') }}
+{% end %}
+
+{% block admincontent %}
+<h2>{{ _('Level List') }}</h2>
+<p class="pull-right"><a href="/admin/level/create" class="btn btn-primary">{{ _('Create New Level or New Step') }}</a>
+<table class="table" id="level-list-table">
+    <thead>
+        <tr>
+            <th>{{ _('LID') }}</th>
+            <th>{{ _('Level') }}</th>
+            <th>{{ _('Step') }}</th>
+            <th>{{ _('Type') }}</th>
+            <th>{{ _('URI') }}</th>
+            <th>{{ _('Title') }}</th>
+            <th>{{ _('Operation') }}</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for level in levels %}
+        <tr id="level-{{ level.id }}">
+            <td>{{ level.id }}</td>
+            <td>{{ level.level }}</td>
+            <td>{{ level.step }}</td>
+            <td>
+                {{ type_name[str(level.type)] }}
+                <a href="/admin/level/type/{{ level.id }}" name="level-show-btn" id="type-{{ level.id }}">{{ _('(Change)') }}</a>
+            </td>
+            <td>{{ level.dirname }}/{{ level.pagename }}</td>
+            <td>{{ level.title }}</td>
+            <td>
+                <a href="/admin/level/show/{{ level.id }}" name="level-show-btn" id="show-{{ level.id }}">{{ _('Detail') }}</a>
+                <a href="/admin/level/edit/{{ level.id }}?type={{ level.type }}" name="level-edit-btn" id="edit-{{ level.id }}">{{ _('Edit') }}</a>
+            </td>
+        </tr>
+        {% end %}
+    </tbody>
+</table>
+{% end %}

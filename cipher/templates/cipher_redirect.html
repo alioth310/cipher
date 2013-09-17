@@ -1,0 +1,9 @@
+{% extends main.html %}
+
+{% block redirect %}
+    <meta http-equiv="Refresh" content="{{ redirecttime }};{{ redirectto }}">
+{% end %}
+
+{% block title %}
+    {{ title }}
+{% end %}

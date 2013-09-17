@@ -1,0 +1,24 @@
+<div class="pagi">
+    <ul class="pagination pagination-sm">
+        {% if page == pages[0] %}
+        <li class="disabled"><a href="/admin/user/list/?page=1">&laquo;</a></li>
+        {% else %}
+        <li><a href="/admin/user/list/?page=1">&laquo;</a></li>
+        {% end %}
+
+        {% for p in range(1, len(pages)-1) %}
+            {% set current_page = str(pages[p]) %}
+            {% if pages[p] == page %}
+            <li class="active"><a href="/admin/user/list/?page={{ current_page }}">{{ current_page }}</a></li>
+            {% else %}
+            <li><a href="/admin/user/list/?page={{ current_page}}">{{ current_page }}</a></li>
+            {% end %}
+        {% end %}
+
+        {% if page == pages[-1] %}
+        <li class="disabled"><a href="/admin/user/list/?page={{ pages[-1] }}">&raquo;</a></li>
+        {% else %}
+        <li><a href="/admin/user/list/?page={{ pages[-1] }}">&raquo;</a></li>
+        {% end %}
+    </ul>
+</div>

@@ -1,0 +1,21 @@
+{% extends "main.html" %}
+
+{% block title %}
+    {{ _("Sign up") }}
+{% end %}
+
+{% block content %}
+<form class="form-horizontal" role="form" action="/user/signup" method="POST">
+    <h2 class="col-md-offset-2">{{ _('Please Sign up') }}</h2>
+    {% raw xsrf_form_html() %}
+
+    {% include "form_error.html" %}
+
+    {% module InputField(form.username, label_style='col-md-2', input_wrapper_style='col-md-4') %}
+    {% module InputField(form.email, label_style='col-md-2', input_wrapper_style='col-md-4') %}
+    {% module InputField(form.password, label_style='col-md-2', input_wrapper_style='col-md-4') %}
+    {% module InputField(form.confirm_password, label_style='col-md-2', input_wrapper_style='col-md-4') %}
+    {% module ButtonField(form.signup, button_wrapper_style='col-md-offset-2 col-md-1', button_style='btn btn-primary') %}
+
+</form>
+{% end %}

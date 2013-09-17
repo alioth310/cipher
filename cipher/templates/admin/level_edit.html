@@ -1,0 +1,40 @@
+{% extends "admin_main.html" %}
+
+{% block title %}
+{{ _('Edit Level') }} - {{ _('Management Center') }} - {{ _('Stray') }}
+{% end %}
+
+{% block admincontent %}
+
+<form class="form-horizontal" enctype="mutilpart/form-data" action="/admin/level/edit/{{ level_info.id }}" method="POST">
+    <h2 class="col-md-offset-2">{{ _('Edit Level') }}</h2>
+    {% raw xsrf_form_html() %}
+
+    {% include "../form_error.html" %}
+
+    {% module HiddenField(form.type, default_value=cipher_type) %}
+    {% module InputField(form.level, label_style='col-md-2', input_wrapper_style='col-md-4', default_value=level_info.level) %}
+    {% module InputField(form.step, label_style='col-md-2', input_wrapper_style='col-md-4', default_value=level_info.step) %}
+    {% module InputField(form.dirname, label_style='col-md-2', input_wrapper_style='col-md-4', default_value=level_info.dirname) %}
+    {% module InputField(form.pagename, label_style='col-md-2', input_wrapper_style='col-md-4', default_value=level_info.pagename) %}
+    {% module InputField(form.title, label_style='col-md-2', input_wrapper_style='col-md-4', default_value=level_info.title) %}
+
+    {% if cipher_type == "0" %}
+    {% module FileField(form.image, label_style='col-md-2', input_wrapper_style='col-md-4') %}
+    {% module InputField(form.imgname, label_style='col-md-2', input_wrapper_style='col-md-4', default_value=level_info.imgname) %}
+    {% module InputField(form.imgalt, label_style='col-md-2', input_wrapper_style='col-md-4', default_value=level_info.imgalt) %}
+    {% module InputField(form.hint, label_style='col-md-2', input_wrapper_style='col-md-4', default_value=level_info.hint) %}
+    {% module TextAreaField(form.hiddencode, label_style='col-md-2', textarea_wrapper_style='col-md-6', default_value=level_info.hiddencode) %}
+    {% module InputField(form.redirectto, label_style='col-md-2', input_wrapper_style='col-md-4', default_value=level_info.redirectto) %}
+    {% module InputField(form.redirecttime, label_style='col-md-2', input_wrapper_style='col-md-4', default_value=level_info.redirecttime) %}
+    {% module ButtonField(form.submit, button_wrapper_style='col-md-offset-2 col-md-1', button_style='btn btn-primary') %}
+    {% elif cipher_type == "1" %}
+    {% module TextAreaField(form.hiddencode, label_style='col-md-2', textarea_wrapper_style='col-md-6', default_value=level_info.hiddencode) %}
+    {% module InputField(form.puretexth1, label_style='col-md-2', input_wrapper_style='col-md-4', default_value=level_info.puretexth1) %}
+    {% module InputField(form.puretextp, label_style='col-md-2', input_wrapper_style='col-md-4', default_value=level_info.puretextp) %}
+    {% elif cipher_type == "2" %}
+    {% module InputField(form.redirectto, label_style='col-md-2', input_wrapper_style='col-md-4', default_value=level_info.redirectto) %}
+    {% module InputField(form.redirecttime, label_style='col-md-2', input_wrapper_style='col-md-4', default_value=level_info.redirecttime) %}
+    {% end %}
+
+{% end %}

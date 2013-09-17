@@ -1,0 +1,20 @@
+<div class="form-group">
+
+    {% set label_style = 'control-label' %}
+    {% if 'label_style' in kwargs %}
+        {% set label_style += ' ' + kwargs['label_style'] %}
+    {% end %}
+
+    {% if ('no_label' not in kwargs) or (kwargs['no_label'] != True) %}
+    <label for="{{ field.name }}" class="{{ label_style }}">{{ _(field.label.text) }}</label>
+    {% end %}
+
+    {% if 'input_wrapper_style' in kwargs %}
+    <div class="{{ kwargs['input_wrapper_style'] }}">
+    {% end %}
+    <input type="{{ field.type[:-5].lower() }}" id="{{ field.name }}" name="{{ field.name }}">
+    {% if 'input_wrapper_style' in kwargs %}
+    </div>
+    {% end %}
+
+</div>

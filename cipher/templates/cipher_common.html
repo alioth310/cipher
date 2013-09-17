@@ -1,0 +1,28 @@
+{% extends main.html %}
+
+{% block redirect %}
+    {% if redirectto is not None %}
+        <meta http-equiv="Refresh" content="{{ redirecttime }};{{ redirectto }}">
+    {% end %}
+{% end %}
+
+{% block title %}
+    {{ title }}
+{% end %}
+
+{% block content %}
+    {% if audioname %}
+        <audio src={{ audioname }} autoplay="true" loop="true"></audio>
+    {% end %}
+    <div class="cipher">
+        <img src="{{ imgname }}" alt="{{ imgalt }}"/>
+        <div class="cipher-hint">
+    {% if hint is not None %}
+            <p>HINT: {{ hint }}</p>
+    {% end %}
+        </div>
+    </div>
+    {% if hiddencode is not None %}
+        <!-- {{ hiddencode }} -->
+    {% end %}
+{% end %}

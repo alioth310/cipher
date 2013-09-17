@@ -1,0 +1,31 @@
+<div class="form-group">
+
+    {% set label_style = 'control-label' %}
+    {% if 'label_style' in kwargs %}
+        {% set label_style += ' ' + kwargs['label_style'] %}
+    {% end %}
+
+    {% set textarea_style = 'form-control' %}
+    {% if 'textarea_style' in kwargs %}
+        {% set textarea_style += ' ' + kwargs['textarea_style'] %}
+    {% end %}
+
+    {% if 'default_value' in kwargs %}
+        {% set default_value = kwargs['default_value'] %}
+    {% else %}
+        {% set default_value = '' %}
+    {% end %}
+
+    {% if ('no_label' not in kwargs) or (kwargs['no_label'] != True) %}
+    <label for="{{ field.name }}" class="{{ label_style }}">{{ _(field.label.text) }}</label>
+    {% end %}
+
+    {% if 'textarea_wrapper_style' in kwargs %}
+    <div class="{{ kwargs['textarea_wrapper_style'] }}">
+    {% end %}
+    <textarea  class="{{ textarea_style }}" id="{{ field.name }}" name="{{ field.name }}" rows="4">{{ default_value }}</textarea>
+    {% if 'textarea_wrapper_style' in kwargs %}
+    </div>
+    {% end %}
+
+</div>

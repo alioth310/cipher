@@ -1,0 +1,23 @@
+{% extends "admin_main.html" %}
+
+{% block title %}
+{{ _('Edit User') }} - {{ _('Management Center') }} - {{ _('Stray') }}
+{% end %}
+
+{% block admincontent %}
+
+<form class="form-horizontal" role="form" action="/admin/user/edit/{{ user_info.id }}" method="POST">
+    <h2 class="col-md-offset-2">{{ _('Edit User') }}</h2>
+    {% raw xsrf_form_html() %}
+
+    {% include "../form_error.html" %}
+
+    {% module InputField(form.username, label_style='col-md-2', input_wrapper_style='col-md-4', default_value=user_info.username) %}
+    {% module InputField(form.email, label_style='col-md-2', input_wrapper_style='col-md-4', default_value=user_info.email) %}
+    {% module InputField(form.password, label_style='col-md-2', input_wrapper_style='col-md-4') %}
+    {% module RadioField(form.status, label_style='col-md-2', radio_wrapper_style='col-md-4', default_value=user_info.status) %}
+    {% module RadioField(form.group, label_style='col-md-2', radio_wrapper_style='col-md-4', default_value=user_info.group) %}
+    {% module ButtonField(form.submit, button_wrapper_style='col-md-offset-2 col-md-1', button_style='btn btn-primary') %}
+
+</form>
+{% end %}

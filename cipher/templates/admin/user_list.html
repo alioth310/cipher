@@ -1,0 +1,39 @@
+{% extends "admin_main.html" %}
+
+{% block title %}
+{{ _('User Management') }} - {{ _('Management Center') }} - {{ _('Stray') }}
+{% end %}
+
+{% block admincontent %}
+<h2>{{ _('Level List') }}</h2>
+<p>{{ _('Current user count:') }} {{ user_count }}
+<table class="table" id="user-list-table">
+    <thead>
+        <tr>
+            <th>{{ _('UID') }}</th>
+            <th>{{ _('Username') }}</th>
+            <th>{{ _('Email') }}</th>
+            <th>{{ _('Status') }}</th>
+            <th>{{ _('Group') }}</th>
+            <th>{{ _('Operation') }}</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in users %}
+        <tr id="user-{{ user.id }}">
+            <td>{{ user.id }}</td>
+            <td>{{ user.username }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ status_name[str(user.status)] }}</td>
+            <td>{{ group_name[str(user.group)] }}</td>
+            <td>
+                <a href="/admin/user/show/{{ user.id }}" name="user-show-btn" id="show-{{ user.id }}">{{ _('Detail') }}</a>
+                <a href="/admin/user/edit/{{ user.id }}" name="user-edit-btn" id="edit-{{ user.id }}">{{ _('Edit') }}</a>
+                <a href="javascript:;" name="user-del-btn" id="del-{{ user.id }}">{{ _('Delete') }}</a>
+            </td>
+        </tr>
+        {% end %}
+    </tbody>
+</table>
+{% module Pagination(pages, page) %}
+{% end %}

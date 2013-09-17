@@ -1,0 +1,31 @@
+{% set label_style = 'control-label' %}
+{% if 'label_style' in kwargs %}
+    {% set label_style += ' ' + kwargs['label_style'] %}
+{% end %}
+
+<div class="form-group">
+    <label class="{{ label_style }}">{{ _(field.name.capitalize()) }}</label>
+
+    {% if 'radio_wrapper_style' in kwargs %}
+    <div class="{{ kwargs['radio_wrapper_style'] }}">
+    {% end %}
+
+    {% for subfield in field %}
+        <div class="radio-inline">
+            <label>
+                {% set value = subfield.id.split('-')[-1] %}
+                {% if str(kwargs['default_value']) == value %}
+                <input type="radio" id="{{ subfield.id }}" name="{{ subfield.name }}" value="{{ value }}" checked>
+                {% else %}
+                <input type="radio" id="{{ subfield.id }}" name="{{ subfield.name }}" value="{{ value }}">
+                {% end %}
+                {{ subfield.label.text }}
+            </label>
+        </div>
+    {% end %}
+
+    {% if 'radio_wrapper_style' in kwargs %}
+    </div>
+    {% end %}
+
+</div>

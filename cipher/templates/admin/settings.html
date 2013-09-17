@@ -1,0 +1,23 @@
+{% extends "admin_main.html" %}
+
+{% block title %}
+{{ _('Edit Settings') }} - {{ _('Management Center') }} - {{ _('Stray') }}
+{% end %}
+
+{% block admincontent %}
+
+<form class="form-horizontal" role="form" action="/admin/settings" method="POST">
+    <h2 class="col-md-offset-2">{{ _('Edit Settings') }}</h2>
+    {% raw xsrf_form_html() %}
+
+    {% include "../form_error.html" %}
+
+    {% module InputField(form.pagesize, label_style='col-md-2', input_wrapper_style='col-md-4', default_value=settings['pagesize']) %}
+    {% module InputField(form.statusname, label_style='col-md-2', input_wrapper_style='col-md-4', default_value=settings['statusname']) %}
+    {% module InputField(form.groupname, label_style='col-md-2', input_wrapper_style='col-md-4', default_value=settings['groupname']) %}
+    {% module InputField(form.typename, label_style='col-md-2', input_wrapper_style='col-md-4', default_value=settings['typename']) %}
+    {% module ButtonField(form.submit, button_wrapper_style='col-md-offset-2 col-md-1', button_style='btn btn-primary') %}
+
+</form>
+
+{% end %}

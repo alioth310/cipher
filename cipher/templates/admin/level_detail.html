@@ -1,0 +1,27 @@
+{% extends "admin_main.html" %}
+
+{% block title %}
+{{ _('Level Detail') }} - {{ _('Management Center') }} - {{ _('Stray') }}
+{% end %}
+
+{% block admincontent %}
+<h2>{{ _('Level Detail') }}</h2>
+<p> <strong class="col-md-3">{{ _('LID') }}</strong> {{ level_info.id }} </p>
+<p> <strong class="col-md-3">{{ _('Level') }}</strong> {{ level_info.level }} </p>
+<p> <strong class="col-md-3">{{ _('Step') }}</strong> {{ level_info.step }} </p>
+<p> <strong class="col-md-3">{{ _('Type') }}</strong> {{ type_name[str(level_info.type)] }} </p>
+<p> <strong class="col-md-3">{{ _('URI') }}</strong> {{ level_info.dirname }}/{{ level_info.pagename }} </p>
+<p> <strong class="col-md-3">{{ _('Title') }}</strong> {{ level_info.title }} </p>
+<p> <strong class="col-md-3">{{ _('Image Name') }}</strong> {{ level_info.imgname }} </p>
+<p> <strong class="col-md-3">{{ _('Image Alt') }}</strong> {{ level_info.imgalt }} </p>
+<p> <strong class="col-md-3">{{ _('Other Images') }}</strong> {{ level_info.otherimgs }} </p>
+<p> <strong class="col-md-3">{{ _('Audio Name') }}</strong> {{ level_info.audioname}} </p>
+<p> <strong class="col-md-3">{{ _('Other Audios') }}</strong> {{ level_info.otheraudios}} </p>
+<p> <strong class="col-md-3">{{ _('Hint') }}</strong> {{ level_info.hint }} </p>
+<p> <strong class="col-md-3">{{ _('Hidden Code') }}</strong> {{ level_info.hiddencode }} </p>
+<p> <strong class="col-md-3">{{ _('Pure Text h1') }}</strong> {{ level_info.puretexth1 }} </p>
+<p> <strong class="col-md-3">{{ _('Pure Text p') }}</strong> {{ level_info.puretextp }} </p>
+<p> <strong class="col-md-3">{{ _('Redirect to') }}</strong> {{ level_info.redirectto }} </p>
+<p> <strong class="col-md-3">{{ _('Redirect time') }}</strong> {{ level_info.redirecttime }} </p>
+
+{% end %}

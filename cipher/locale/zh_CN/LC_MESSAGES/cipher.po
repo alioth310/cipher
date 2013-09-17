@@ -1,0 +1,485 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-09-17 20:10+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: forms.py:59 forms.py:87 forms.py:111 templates/admin/user_detail.html:10
+#: templates/admin/user_list.html:14
+msgid "Username"
+msgstr "帐号"
+
+#: forms.py:60 forms.py:88 forms.py:112
+msgid "Username should not be blank"
+msgstr "帐号不能为空"
+
+#: forms.py:62 forms.py:91 forms.py:115
+msgid "Username length should less than 64"
+msgstr "帐号长度应小于64字符"
+
+#: forms.py:64 forms.py:99 forms.py:123
+msgid "Password"
+msgstr "密码"
+
+#: forms.py:65
+msgid "Password shoule not be blank"
+msgstr "密码不能为空"
+
+#: forms.py:67 forms.py:102 forms.py:125
+msgid "Password length should less than 32"
+msgstr "密码长度应小于32字符"
+
+#: forms.py:69 templates/login.html:4 templates/navbar.html:19
+msgid "Login"
+msgstr "登录"
+
+#: forms.py:72
+msgid "Old Password"
+msgstr "旧密码"
+
+#: forms.py:73
+msgid "Old password should not be blank"
+msgstr "旧密码不能为空"
+
+#: forms.py:75
+msgid "New Password"
+msgstr "新密码"
+
+#: forms.py:76
+msgid "New password should not be blank"
+msgstr "新密码不能为空"
+
+#: forms.py:78
+msgid "New password length should less than 32"
+msgstr "新密码长度应小于32字符"
+
+#: forms.py:80 forms.py:104
+msgid "Confirm Password"
+msgstr "确认密码"
+
+#: forms.py:82
+msgid "New password you entered twice is different"
+msgstr "两次输入的密码不一致"
+
+#: forms.py:84 forms.py:129 forms.py:133 forms.py:174 forms.py:200
+#: forms.py:229 forms.py:245
+msgid "Submit"
+msgstr "提交"
+
+#: forms.py:89 forms.py:113
+msgid "Username is not valid"
+msgstr "帐号不合法"
+
+#: forms.py:93 forms.py:117 templates/admin/user_detail.html:11
+#: templates/admin/user_list.html:15
+msgid "Email"
+msgstr "邮箱"
+
+#: forms.py:94 forms.py:118
+msgid "Email should not be blank"
+msgstr "邮箱不能为空"
+
+#: forms.py:95 forms.py:119
+msgid "Email address is not valid"
+msgstr "邮箱地址不合法"
+
+#: forms.py:97 forms.py:121
+msgid "Email length should less than 64"
+msgstr "邮箱长度应小于64字符"
+
+#: forms.py:100
+msgid "Password should not be blank"
+msgstr "密码不能为空"
+
+#: forms.py:106
+msgid "Password you entered twice is different"
+msgstr "两次输入的密码不一致"
+
+#: forms.py:108 templates/navbar.html:20 templates/signup.html:4
+msgid "Sign up"
+msgstr "注册"
+
+#: forms.py:136 forms.py:177 forms.py:203 templates/chooselevel.html:14
+#: templates/admin/level_detail.html:10 templates/admin/level_list.html:14
+msgid "Level"
+msgstr "关卡"
+
+#: forms.py:137 forms.py:178 forms.py:204
+msgid "Level should not be blank"
+msgstr "关卡不能为空"
+
+#: forms.py:138 forms.py:179 forms.py:205
+msgid "Level should be a number"
+msgstr "关卡应为数字"
+
+#: forms.py:140 forms.py:181 forms.py:207 templates/admin/level_detail.html:11
+#: templates/admin/level_list.html:15
+msgid "Step"
+msgstr "步骤"
+
+#: forms.py:141 forms.py:182 forms.py:208
+msgid "Step should not be blank"
+msgstr "步骤不能为空"
+
+#: forms.py:142 forms.py:183 forms.py:209
+msgid "Step should be a number"
+msgstr "步骤应为数字"
+
+#: forms.py:145 forms.py:186 forms.py:212
+msgid "Dir Name"
+msgstr "路径名"
+
+#: forms.py:146 forms.py:187 forms.py:213
+msgid "Dir name should not be blank"
+msgstr "路径名不能为空"
+
+#: forms.py:147 forms.py:188 forms.py:214
+msgid "Dir name is invalid"
+msgstr "路径名不合法"
+
+#: forms.py:149 forms.py:190 forms.py:216
+msgid "Page Name"
+msgstr "页面名"
+
+#: forms.py:150 forms.py:191 forms.py:217
+msgid "Page name should not be blank"
+msgstr "页面名不能为空"
+
+#: forms.py:151 forms.py:192 forms.py:218
+msgid "Page name is invalid"
+msgstr "页面名不合法"
+
+#: forms.py:153 forms.py:194 forms.py:220 templates/admin/level_detail.html:14
+#: templates/admin/level_list.html:18
+msgid "Title"
+msgstr "标题"
+
+#: forms.py:154 forms.py:195 forms.py:221
+msgid "Title should not be blank"
+msgstr "标题不能为空"
+
+#: forms.py:156
+msgid "Image File"
+msgstr "图片"
+
+#: forms.py:161 templates/admin/level_detail.html:15
+msgid "Image Name"
+msgstr "图片名"
+
+#: forms.py:162
+msgid "Image name should not be blank"
+msgstr "图片名不能为空"
+
+#: forms.py:163
+msgid "Image name is invalid"
+msgstr "图片名不合法"
+
+#: forms.py:165 templates/admin/level_detail.html:16
+msgid "Image Alt"
+msgstr "图片Alt"
+
+#: forms.py:166 templates/admin/level_detail.html:20
+msgid "Hint"
+msgstr ""
+
+#: forms.py:168 forms.py:223
+msgid "Redirect To"
+msgstr "跳转到"
+
+#: forms.py:169 forms.py:224
+msgid "Redirect URL is invalid"
+msgstr "跳转地址不合法"
+
+#: forms.py:171 forms.py:226 templates/admin/level_detail.html:25
+msgid "Redirect time"
+msgstr "跳转时间"
+
+#: forms.py:172 forms.py:227
+msgid "Redirect time is invalid"
+msgstr "跳转时间不合法"
+
+#: forms.py:198 templates/admin/level_detail.html:22
+msgid "Pure Text h1"
+msgstr "纯文本标题"
+
+#: forms.py:199 templates/admin/level_detail.html:23
+msgid "Pure Text p"
+msgstr "纯文本段落"
+
+#: forms.py:232
+msgid "Page Size"
+msgstr "每页个数"
+
+#: forms.py:233
+msgid "Page size should not be blank"
+msgstr "每页个数不能为空"
+
+#: forms.py:234
+msgid "Page size should be a number"
+msgstr "每页个数应为数字"
+
+#: forms.py:236
+msgid "Status Name"
+msgstr "状态名"
+
+#: forms.py:237
+msgid "Status name should not be blank"
+msgstr "状态名不能为空"
+
+#: forms.py:239
+msgid "Group Name"
+msgstr "组名"
+
+#: forms.py:240
+msgid "Group name should not be blank"
+msgstr "组名不能为空"
+
+#: forms.py:242
+msgid "Cipher Type Name"
+msgstr "谜题类型名"
+
+#: forms.py:243
+msgid "Cipher type name should not be blank"
+msgstr "谜题类型名不能为空"
+
+#: models/admin.py:17 models/user.py:37
+msgid "Username already exist!"
+msgstr "用户名已存在"
+
+#: models/admin.py:20
+msgid "Can not edit your own information"
+msgstr "不能编辑自己的信息"
+
+#: models/admin.py:51
+msgid "Level type error"
+msgstr "谜题类型错误"
+
+#: models/user.py:18
+msgid "Username does not exist!"
+msgstr "帐号不存在"
+
+#: models/user.py:21
+msgid "Password you entered is incorrect!"
+msgstr "密码错误"
+
+#: models/user.py:24
+msgid "Forbidden user!"
+msgstr "用户被禁止"
+
+#: models/user.py:56
+msgid "Old password you entered is incorrect!"
+msgstr "旧密码错误"
+
+#: templates/404.html:4 templates/404.html:8
+msgid "Page Not Found"
+msgstr "页面未找到"
+
+#: templates/about.html:4 templates/navbar.html:15
+msgid "About"
+msgstr "关于"
+
+#: templates/about.html:4 templates/navbar.html:9 templates/admin/index.html:4
+#: templates/admin/level_changetype.html:4 templates/admin/level_detail.html:4
+#: templates/admin/level_edit.html:4 templates/admin/level_list.html:4
+#: templates/admin/settings.html:4 templates/admin/user_detail.html:4
+#: templates/admin/user_edit.html:4 templates/admin/user_list.html:4
+msgid "Stray"
+msgstr "谜·路"
+
+#: templates/changepassword.html:4 templates/changepassword.html:9
+#: templates/navbar.html:28
+msgid "Change Password"
+msgstr "修改密码"
+
+#: templates/chooselevel.html:4 templates/chooselevel.html:9
+#: templates/navbar.html:27
+msgid "Choose Level"
+msgstr "选择关卡"
+
+#: templates/footer.html:3
+msgid "Powered by "
+msgstr ""
+
+#: templates/footer.html:4
+msgid "Alioth310"
+msgstr "你像从前一样"
+
+#: templates/index.html:4
+msgid "Welcome to cipher.pythoner.com"
+msgstr ""
+
+#: templates/index.html:9
+msgid "Start"
+msgstr "开始游戏"
+
+#: templates/login.html:9
+msgid "Please Login"
+msgstr "请登录"
+
+#: templates/navbar.html:14
+msgid "Home"
+msgstr "首页"
+
+#: templates/navbar.html:30 templates/admin/index.html:4
+#: templates/admin/index.html:8 templates/admin/level_changetype.html:4
+#: templates/admin/level_detail.html:4 templates/admin/level_edit.html:4
+#: templates/admin/level_list.html:4 templates/admin/settings.html:4
+#: templates/admin/user_detail.html:4 templates/admin/user_edit.html:4
+#: templates/admin/user_list.html:4
+msgid "Management Center"
+msgstr "管理中心"
+
+#: templates/navbar.html:32
+msgid "Logout"
+msgstr "注销"
+
+#: templates/signup.html:9
+msgid "Please Sign up"
+msgstr "注册用户"
+
+#: templates/admin/index.html:9
+msgid "You can do some management operations here"
+msgstr ""
+
+#: templates/admin/level_changetype.html:4
+#: templates/admin/level_changetype.html:9
+#, fuzzy
+msgid "Change Level Type"
+msgstr "选择关卡"
+
+#: templates/admin/level_detail.html:4 templates/admin/level_detail.html:8
+msgid "Level Detail"
+msgstr "关卡详细信息"
+
+#: templates/admin/level_detail.html:9 templates/admin/level_list.html:13
+msgid "LID"
+msgstr ""
+
+#: templates/admin/level_detail.html:12 templates/admin/level_list.html:16
+msgid "Type"
+msgstr "类型"
+
+#: templates/admin/level_detail.html:13 templates/admin/level_list.html:17
+msgid "URI"
+msgstr ""
+
+#: templates/admin/level_detail.html:17
+msgid "Other Images"
+msgstr "其它图片"
+
+#: templates/admin/level_detail.html:18
+msgid "Audio Name"
+msgstr "音频名"
+
+#: templates/admin/level_detail.html:19
+msgid "Other Audios"
+msgstr "其他音频"
+
+#: templates/admin/level_detail.html:21
+msgid "Hidden Code"
+msgstr "隐藏代码"
+
+#: templates/admin/level_detail.html:24
+msgid "Redirect to"
+msgstr "跳转到"
+
+#: templates/admin/level_edit.html:4 templates/admin/level_edit.html:10
+msgid "Edit Level"
+msgstr "编辑关卡"
+
+#: templates/admin/level_list.html:4 templates/admin/nav.html:4
+msgid "Level Management"
+msgstr "关卡管理"
+
+#: templates/admin/level_list.html:8 templates/admin/user_list.html:8
+msgid "Level List"
+msgstr "关卡列表"
+
+#: templates/admin/level_list.html:9
+msgid "Create New Level or New Step"
+msgstr "创建新关卡/步骤"
+
+#: templates/admin/level_list.html:19 templates/admin/user_list.html:18
+msgid "Operation"
+msgstr "操作"
+
+#: templates/admin/level_list.html:30
+msgid "(Change)"
+msgstr "（修改）"
+
+#: templates/admin/level_list.html:35 templates/admin/user_list.html:30
+msgid "Detail"
+msgstr "详细"
+
+#: templates/admin/level_list.html:36 templates/admin/user_list.html:31
+msgid "Edit"
+msgstr "编辑"
+
+#: templates/admin/nav.html:3 templates/admin/user_list.html:4
+msgid "User Management"
+msgstr "帐号管理"
+
+#: templates/admin/nav.html:5
+msgid "Settings"
+msgstr "设置"
+
+#: templates/admin/settings.html:4 templates/admin/settings.html:10
+msgid "Edit Settings"
+msgstr "编辑设置"
+
+#: templates/admin/user_detail.html:4 templates/admin/user_detail.html:8
+msgid "User Detail"
+msgstr "用户详细信息"
+
+#: templates/admin/user_detail.html:9 templates/admin/user_list.html:13
+msgid "UID"
+msgstr ""
+
+#: templates/admin/user_detail.html:12 templates/admin/user_list.html:16
+msgid "Status"
+msgstr "状态"
+
+#: templates/admin/user_detail.html:13 templates/admin/user_list.html:17
+msgid "Group"
+msgstr "用户组"
+
+#: templates/admin/user_detail.html:14
+msgid "Register Time"
+msgstr "注册时间"
+
+#: templates/admin/user_detail.html:15
+msgid "Register IP"
+msgstr "注册IP"
+
+#: templates/admin/user_detail.html:16
+msgid "Last Login Time"
+msgstr "上次访问时间"
+
+#: templates/admin/user_detail.html:17
+msgid "Lat Login IP"
+msgstr "上次访问IP"
+
+#: templates/admin/user_edit.html:4 templates/admin/user_edit.html:10
+msgid "Edit User"
+msgstr "编辑用户"
+
+#: templates/admin/user_list.html:9
+msgid "Current user count:"
+msgstr "当前用户数量："
+
+#: templates/admin/user_list.html:32
+msgid "Delete"
+msgstr "删除"

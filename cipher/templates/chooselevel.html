@@ -1,0 +1,20 @@
+{% extends "main.html" %}
+
+{% block title %}
+    {{ _('Choose Level') }} - {{ username }}
+{% end %}
+
+{% block content %}
+<div class="chooselevel">
+    <h1>{{ _('Choose Level') }} - {{ username }}</h1>
+    <ul>
+    {% for level in levels %}
+        <li>
+        <a href="/cipher/{{ level.dirname }}/{{ level.pagename }}.html">
+            {{ _('Level') }} {{ level.level }}: {{ level.title }}
+        </a>
+        </li>
+    {% end %}
+</ul>
+</div>
+{% end %}

@@ -1,0 +1,21 @@
+{% if form.errors %}
+<div class="alert alert-danger col-md-offset-2 col-md-4">
+    <ul>
+        {% for field_name, field_errors in form.errors.iteritems() %}
+            {% for error in field_errors %}
+            <li>{{ _(error) }}</li>
+            {% end %}
+        {% end %}
+    </ul>
+</div>
+{% end %}
+
+{% if db_error %}
+<div class="alert alert-danger col-md-offset-2 col-md-4">
+    <ul>
+        <li>{{ _(db_error) }}</li>
+    </ul>
+</div>
+{% end %}
+
+<div class="clearfix"></div>

@@ -1,0 +1,31 @@
+<div class="form-group">
+
+    {% set label_style = 'control-label' %}
+    {% if 'label_style' in kwargs %}
+        {% set label_style += ' ' + kwargs['label_style'] %}
+    {% end %}
+
+    {% set input_style = 'form-control' %}
+    {% if 'input_style' in kwargs %}
+        {% set input_style += ' ' + kwargs['input_style'] %}
+    {% end %}
+
+    {% if 'default_value' in kwargs %}
+        {% set default_value = kwargs['default_value'] %}
+    {% else %}
+        {% set default_value = '' %}
+    {% end %}
+
+    {% if ('no_label' not in kwargs) or (kwargs['no_label'] != True) %}
+    <label for="{{ field.name }}" class="{{ label_style }}">{{ _(field.label.text) }}</label>
+    {% end %}
+
+    {% if 'input_wrapper_style' in kwargs %}
+    <div class="{{ kwargs['input_wrapper_style'] }}">
+    {% end %}
+    <input type="{{ field.type[:-5].lower() }}" class="{{ input_style }}" id="{{ field.name }}" name="{{ field.name }}" placeholder="{{ _(field.label.text) }}" value="{{ default_value }}">
+    {% if 'input_wrapper_style' in kwargs %}
+    </div>
+    {% end %}
+
+</div>

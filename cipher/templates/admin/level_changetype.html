@@ -1,0 +1,18 @@
+{% extends "admin_main.html" %}
+
+{% block title %}
+{{ _('Change Level Type') }} - {{ _('Management Center') }} - {{ _('Stray') }}
+{% end %}
+
+{% block admincontent %}
+<form class="form-horizontal" role="form" action="/admin/level/type/{{ level_info.id }}" method="POST">
+    <h2 class="col-md-offset-2">{{ _('Change Level Type') }}</h2>
+    {% raw xsrf_form_html() %}
+
+    {% include "../form_error.html" %}
+
+    {% module RadioField(form.type, label_style='col-md-2', radio_wrapper_style='col-md-4', default_value=level_info.type) %}
+    {% module ButtonField(form.submit, button_wrapper_style='col-md-offset-2 col-md-1', button_style='btn btn-primary') %}
+
+</form>
+{% end %}

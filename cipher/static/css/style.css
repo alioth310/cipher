@@ -1,0 +1,129 @@
+@CHARSET "UTF-8";
+
+body {
+    background: url("../img/noise.png") repeat #e5e5e5;
+    margin: 30px auto;
+    font-family: Arial, Helvetica, Microsoft YaHei, sans-serif;
+}
+
+.content {
+    margin-top: 40px;
+    min-height: 450px;
+    text-align: center;
+}
+
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    color: #333333;
+}
+
+.glyphicon {
+    margin-right: 10px;
+}
+
+
+.content ul {
+    text-align: left;
+    margin-left: 10px;
+    font-size: 17px;
+}
+
+.alert ul {
+    margin-left: -20px;
+    font-size: 15px;
+}
+
+
+/* cipher start */
+.cipher {
+    color: #333333;
+}
+
+.cipher h1 {
+    font-size: 25px;
+}
+
+.cipher p {
+    font-size: 18px;
+}
+
+.cipher-hint {
+    margin-top: 10px;
+    text-decoration: underline;
+}
+/* cipher end */
+
+
+/* about start */
+.about {
+    max-width: 700px;
+    margin: 80px 60px 20px;
+    color: #ded9c2;
+}
+
+.about h1 {
+    font-size: 22px;
+    font-weight: normal;
+    color: #efefef;
+    margin: 20px 0;
+
+}
+
+.about p {
+    font-size: 15px;
+    margin: 0 10px;
+    padding-bottom: 12px;
+}
+
+.about ul {
+    margin-left: 40px;
+}
+
+.about a {
+    font-weight: bold;
+}
+/* about end */
+
+
+/* user start */
+.chooselevel {
+    text-align: left;
+    margin-left: 20px;
+}
+/* user end */
+
+
+/* admin start */
+.form-horizontal {
+    margin-top: 30px;
+}
+
+.form-horizontal h2 {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.admin-sidebar {
+    margin-top: 20px;
+}
+
+.admin-sidebar ul li {
+    font-size: 14px;
+}
+
+.admin-content {
+    text-align: left;
+}
+
+.admin-content h2 {
+    margin-bottom: 35px;
+}
+
+.pagi {
+    text-align: center;
+} 
+/* admin end */
+
+
+
